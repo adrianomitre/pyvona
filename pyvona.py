@@ -86,9 +86,9 @@ class Voice(object):
 
     @codec.setter
     def codec(self, codec):
-        if codec not in ["mp3", "ogg"]:
+        if codec not in ["mp3", "mp4", "ogg"]:
             raise PyvonaException(
-                "Invalid codec specified. Please choose 'mp3' or 'ogg'")
+                "Invalid codec specified. Please choose 'mp3', 'mp4' or 'ogg'")
         self._codec = codec
 
     @contextlib.contextmanager
